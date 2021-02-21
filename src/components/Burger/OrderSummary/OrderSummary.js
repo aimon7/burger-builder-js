@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import Aux from '../../../hoc/Auxilliary';
+import Aux from '../../../hoc/Auxilliary/Auxilliary';
 import Button from '../../UI/Button/Button';
 
 class OrderSummary extends Component {
@@ -13,7 +13,7 @@ class OrderSummary extends Component {
                     </li>
                 )
             });
-        
+
         return (
             <Aux>
                 <h3>Your order</h3>
