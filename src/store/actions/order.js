@@ -20,10 +20,10 @@ export const purchaseBurgerStart = (orderData) => {
     return dispatch => {
         axios.post('/orders.json', orderData)
             .then(response => {
-                dispatch(purchaseBurgerSuccess(response.data, orderData))
+                dispatch(purchaseBurgerSuccess(response.data, orderData));
             })
             .catch(error => {
-                dispatch(purchaseBurgerFail(error))
+                dispatch(purchaseBurgerFail(error));
             });
     }
 }
