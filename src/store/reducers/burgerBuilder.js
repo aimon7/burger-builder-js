@@ -42,6 +42,7 @@ const burgerBuilder = (state = initialState, action) => {
                     cheese: action.ingredients.cheese,
                     meat: action.ingredients.meat,
                 },
+                totalPrice: 4, // Base price is 4,00 €
                 error: false
             }
         case actionTypes.FETCH_INGREDIENTS_FAILED:
