@@ -35,12 +35,12 @@ export const auth = (email, password, isSignup) => {
             url = `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${process.env.REACT_APP_FIREBASE_KEY}`
         axios.post(url, authData)
             .then(response => {
-                console.log(response);
+                // console.log(response);
                 dispatch(authSuccess(response.data.idToken, response.data.localId));
             })
             .catch(er => {
-                console.log(er);
-                dispatch(authFail(er));
+                // console.log(er);
+                dispatch(authFail(er.response.data.error));
             })
     }
 }
